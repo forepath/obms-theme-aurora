@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2b15a33546e311f31848df6f7bdbb7f9",
+    "content-hash": "bdb4130128e82da3c1596447b7f5bf70",
     "packages": [
         {
             "name": "composer/installers",
@@ -153,17 +153,17 @@
             "time": "2024-06-24T20:46:46+00:00"
         },
         {
-            "name": "obms/composer-installer",
-            "version": "v2.1.0",
+            "name": "forepath/obms-composer-installer",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/OBMS-Open-Business-Management-Software/composer-installer.git",
-                "reference": "4d5d89479d50917d74d362b1a43326d922c5e217"
+                "url": "https://github.com/forepath/obms-composer-installer.git",
+                "reference": "fd786d62ea64530fc26d66789bb5978fd71fafcc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OBMS-Open-Business-Management-Software/composer-installer/zipball/4d5d89479d50917d74d362b1a43326d922c5e217",
-                "reference": "4d5d89479d50917d74d362b1a43326d922c5e217",
+                "url": "https://api.github.com/repos/forepath/obms-composer-installer/zipball/fd786d62ea64530fc26d66789bb5978fd71fafcc",
+                "reference": "fd786d62ea64530fc26d66789bb5978fd71fafcc",
                 "shasum": ""
             },
             "require": {
@@ -186,36 +186,36 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BUSL-1.1"
+                "Apache-2.0"
             ],
             "description": "The OBMS package installer.",
-            "homepage": "https://getobms.com",
+            "homepage": "https://forepath.io",
             "keywords": [
                 "obms",
                 "open business management software"
             ],
             "support": {
-                "docs": "https://docs.getobms.com",
-                "email": "support@getobms.com",
-                "issues": "https://github.com/OBMS-Open-Business-Management-Software/core/issues",
-                "source": "https://github.com/OBMS-Open-Business-Management-Software/core"
+                "docs": "https://forepath.io/docs/obms",
+                "email": "support@forepath.io",
+                "issues": "https://github.com/forepath/obms-composer-installer/issues",
+                "source": "https://github.com/forepath/obms-composer-installer"
             },
-            "time": "2025-03-29T20:33:21+00:00"
+            "time": "2025-07-17T16:16:30+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "laravel/pint",
-            "version": "v1.21.2",
+            "version": "v1.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
-                "reference": "370772e7d9e9da087678a0edf2b11b6960e40558"
+                "reference": "0345f3b05f136801af8c339f9d16ef29e6b4df8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/370772e7d9e9da087678a0edf2b11b6960e40558",
-                "reference": "370772e7d9e9da087678a0edf2b11b6960e40558",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/0345f3b05f136801af8c339f9d16ef29e6b4df8a",
+                "reference": "0345f3b05f136801af8c339f9d16ef29e6b4df8a",
                 "shasum": ""
             },
             "require": {
@@ -226,12 +226,12 @@
                 "php": "^8.2.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.72.0",
-                "illuminate/view": "^11.44.2",
-                "larastan/larastan": "^3.2.0",
-                "laravel-zero/framework": "^11.36.1",
+                "friendsofphp/php-cs-fixer": "^3.82.2",
+                "illuminate/view": "^11.45.1",
+                "larastan/larastan": "^3.5.0",
+                "laravel-zero/framework": "^11.45.0",
                 "mockery/mockery": "^1.6.12",
-                "nunomaduro/termwind": "^2.3",
+                "nunomaduro/termwind": "^2.3.1",
                 "pestphp/pest": "^2.36.0"
             },
             "bin": [
@@ -239,6 +239,9 @@
             ],
             "type": "project",
             "autoload": {
+                "files": [
+                    "overrides/Runner/Parallel/ProcessFactory.php"
+                ],
                 "psr-4": {
                     "App\\": "app/",
                     "Database\\Seeders\\": "database/seeders/",
@@ -268,17 +271,17 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-            "time": "2025-03-14T22:31:42+00:00"
+            "time": "2025-07-10T18:09:32+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }
