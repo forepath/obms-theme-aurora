@@ -1,0 +1,31 @@
+{
+    "name": "forepath/obms-theme-aurora",
+    "type": "obms-theme",
+    "description": "The OBMS Aurora theme.",
+    "keywords": ["obms", "open business management software"],
+    "license": "Apache-2.0",
+    "homepage": "https://forepath.io",
+    "support": {
+        "docs": "https://forepath.io/docs/obms",
+        "email": "support@forepath.io",
+        "issues": "https://github.com/forepath/obms-theme-aurora/issues",
+        "source": "https://github.com/forepath/obms-theme-aurora"
+    },
+    "extra": {
+        "dir": "aurora"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.13"
+    },
+    "require": {
+        "php": "^8.2",
+        "forepath/obms-composer-installer": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "forepath/obms-composer-installer": true,
+            "php-http/discovery": true
+        }
+    }
+}
