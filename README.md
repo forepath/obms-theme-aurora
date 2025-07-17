@@ -1,4 +1,4 @@
-# OBMS Composer Installer
+# OBMS Aurora Theme
 
 OBMS is an open-source ERP-system tailored specifically to digital business-cases.
 
