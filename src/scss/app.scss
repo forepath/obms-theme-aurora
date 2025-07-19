@@ -6,12 +6,10 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
-@import 'bootstrap-icons/font/bootstrap-icons';
 
-@font-face {
-    font-family: 'bootstrap-icons';
-    src: url('/themes/aurora/fonts/vendor/bootstrap-icons/bootstrap-icons.woff2') format('woff2'), url('/themes/aurora/fonts/vendor/bootstrap-icons/bootstrap-icons.woff') format('woff');
-}
+$bootstrap-icons-font-dir: "/themes/aurora/fonts/vendor/bootstrap-icons";
+
+@import 'bootstrap-icons/font/bootstrap-icons';
 
 // Datatables
 @import 'datatables.net-dt/css/jquery.dataTables.min';
@@ -455,6 +453,7 @@ input[type=checkbox] {
     &.form-control {
         box-shadow: none !important;
         z-index: 0;
+        appearance: none;
         -webkit-appearance: none;
         border: none;
 
@@ -522,6 +521,7 @@ input[type=radio] {
     &.form-control {
         box-shadow: none !important;
         z-index: 0;
+        appearance: none;
         -webkit-appearance: none;
         border: none;
 
