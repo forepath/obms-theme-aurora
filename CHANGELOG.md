@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2](https://github.com/forepath/obms-theme-aurora/compare/v1.0.1...v1.0.2) (2025-07-19)
+
+
+### Bug Fixes
+
+* bootstrap icons font path override ([6ced410](https://github.com/forepath/obms-theme-aurora/commit/6ced4101a05b13461456cd6fa129717d21ec011b))
+
 ## [1.0.1](https://github.com/forepath/obms-theme-aurora/compare/v1.0.0...v1.0.1) (2025-07-17)
 
 
