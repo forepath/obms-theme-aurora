@@ -14,4 +14,5 @@ const mix = require('laravel-mix');
 mix.setPublicPath(`src/public`);
 mix.js('src/js/app.js', 'js')
     .js('node_modules/chart.js/dist/chart.umd.js', 'js')
+    .copy('node_modules/bootstrap-icons/font/fonts', 'src/public/fonts/vendor/bootstrap-icons')
     .sourceMaps();
