@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3](https://github.com/forepath/obms-theme-aurora/compare/v1.0.2...v1.0.3) (2025-07-19)
+
+
+### Bug Fixes
+
+* dynamic bootstrap icons font ([9790ecb](https://github.com/forepath/obms-theme-aurora/commit/9790ecb7639cdd7abeabd32bb35cf2ee489e3e76))
+
 ## [1.0.2](https://github.com/forepath/obms-theme-aurora/compare/v1.0.1...v1.0.2) (2025-07-19)
 
 
