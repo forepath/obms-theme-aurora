@@ -1,4 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
-    "/js/chart.umd.js": "/js/chart.umd.js"
+    "/js/chart.umd.js": "/js/chart.umd.js",
+    "/fonts/vendor/bootstrap-icons/bootstrap-icons.woff": "/fonts/vendor/bootstrap-icons/bootstrap-icons.woff",
+    "/fonts/vendor/bootstrap-icons/bootstrap-icons.woff2": "/fonts/vendor/bootstrap-icons/bootstrap-icons.woff2"
 }
