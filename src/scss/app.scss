@@ -1,5 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 // Variables
 @import 'variables';
@@ -30,7 +30,7 @@ main {
 }
 
 .navbar-brand {
-    width: 250px;
+    width: calc(350px - 3.75rem);
     max-width: 100%;
 }
 
@@ -347,14 +347,14 @@ main {
                 &:not(.dropdown-indicator) {
                     align-items: center;
                     background-color: var(--gray);
-                    border-radius: 0.25rem;
+                    border-radius: $border-radius;
                     color: var(--primary);
                     display: flex;
                     font-size: 1rem;
-                    min-height: 2.25rem;
+                    min-height: 2.5rem;
                     justify-content: center;
                     transition-duration: .25s;
-                    min-width: 2.25rem;
+                    min-width: 2.5rem;
                 }
             }
 
@@ -588,17 +588,17 @@ input[type=radio] {
 }
 
 .modal-content {
-    border-radius: calc($border-radius * 2);
+    border-radius: $border-radius;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 
     .modal-header {
-        border-top-left-radius: calc($border-radius * 2);
-        border-top-right-radius: calc($border-radius * 2);
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
     }
 
     .modal-footer {
-        border-bottom-left-radius: calc($border-radius * 2);
-        border-bottom-right-radius: calc($border-radius * 2);
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
     }
 }
 
@@ -624,7 +624,7 @@ input[type=radio] {
 
 .card {
     border: none;
-    border-radius: calc($border-radius * 2);
+    border-radius: $border-radius;
     box-shadow: $box-shadow-sm;
     overflow: hidden;
 
@@ -678,6 +678,18 @@ input[type=radio] {
                 transform: translate(-50%, -50%);
                 transition: all 0.5s;
             }
+        }
+    }
+
+    .card-header {
+        i {
+            border-bottom-right-radius: $border-radius;
+        }
+    }
+
+    .card-footer {
+        i {
+            border-top-right-radius: $border-radius;
         }
     }
 }
@@ -736,7 +748,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 ::-webkit-scrollbar {
-    width: 0.625rem;
+    width: 0.5rem;
 }
 
 ::-webkit-scrollbar-track {

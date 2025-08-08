@@ -32,7 +32,7 @@
                 </div>
             </a>
             <div class="d-flex gap-3 flex-grow-1 justify-content-between">
-                <button class="navbar-toggler shadow-sm rounded collapsed" type="button" data-toggle="collapse"
+                <button class="navbar-toggler rounded collapsed" type="button" data-toggle="collapse"
                     data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <i class="bi bi-list"></i>
