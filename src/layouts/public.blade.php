@@ -114,7 +114,11 @@
                             class="nav-item {{ str_contains(Request::route()?->getName(), 'customer.support') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('customer.support') }}"
                                 title="{{ __('interface.misc.tickets') }}" data-toggle="tooltip">
-                                <i class="bi bi-ticket-fill"></i>
+                                <i class="bi bi-ticket-fill">
+                                    @if (request()->get('badges')->tickets > 0)
+                                        <span class="bubble bubble-warning bubble--on-sidebar"></span>
+                                    @endif
+                                </i>
                                 <span>{{ __('interface.misc.tickets') }}</span>
                             </a>
                         </li>
@@ -130,7 +134,13 @@
                             class="nav-item {{ str_contains(Request::route()?->getName(), 'customer.invoices') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('customer.invoices') }}"
                                 title="{{ __('interface.misc.invoices') }}" data-toggle="tooltip">
-                                <i class="bi bi-file-earmark-text"></i>
+                                <i class="bi bi-file-earmark-text">
+                                    @if (request()->get('badges')->invoices->overdue > 0)
+                                        <span class="bubble bubble-danger bubble--on-sidebar"></span>
+                                    @elseif (request()->get('badges')->invoices->total > 0)
+                                        <span class="bubble bubble-warning bubble--on-sidebar"></span>
+                                    @endif
+                                </i>
                                 <span>{{ __('interface.misc.invoices') }}</span>
                             </a>
                         </li>

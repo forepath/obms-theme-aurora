@@ -127,15 +127,24 @@
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
                             aria-expanded="false" title="{{ __('interface.misc.support') }}">
                             <div>
-                                <i class="bi bi-telephone"></i>
+                                <i class="bi bi-telephone">
+                                    @if (request()->get('badges')->tickets > 0)
+                                        <span class="bubble bubble-warning bubble--on-sidebar"></span>
+                                    @endif
+                                </i>
                                 <span>{{ __('interface.misc.support') }}</span>
                             </div>
                             <i class="bi bi-chevron-down dropdown-indicator"></i>
                         </a>
                         <div class="dropdown-menu w-100" aria-labelledby="dropdown04">
-                            <a class="dropdown-item" href="{{ route('admin.support') }}"
+                            <a class="dropdown-item d-flex align-items-center justify-content-between" href="{{ route('admin.support') }}"
                                 title="{{ __('interface.misc.tickets') }}"
-                                data-toggle="tooltip">{{ __('interface.misc.tickets') }}</a>
+                                data-toggle="tooltip">
+                                {{ __('interface.misc.tickets') }}
+                                @if (request()->get('badges')->tickets > 0)
+                                    <span class="bubble bubble-warning bubble--on-dropdown"></span>
+                                @endif
+                            </a>
                             @if (Auth::user()->role == 'admin')
                                 <a class="dropdown-item" href="{{ route('admin.support.categories') }}"
                                     title="{{ __('interface.misc.categories') }}"
@@ -213,15 +222,24 @@
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
                             aria-expanded="false" title="{{ __('interface.misc.shop') }}">
                             <div>
-                                <i class="bi bi-box"></i>
+                                <i class="bi bi-box">
+                                    @if (request()->get('badges')->orders > 0)
+                                        <span class="bubble bubble-warning bubble--on-sidebar"></span>
+                                    @endif
+                                </i>
                                 <span>{{ __('interface.misc.shop') }}</span>
                             </div>
                             <i class="bi bi-chevron-down dropdown-indicator"></i>
                         </a>
                         <div class="dropdown-menu w-100" aria-labelledby="dropdown04">
-                            <a class="dropdown-item" href="{{ route('admin.shop.orders') }}"
+                            <a class="dropdown-item d-flex align-items-center justify-content-between" href="{{ route('admin.shop.orders') }}"
                                 title="{{ __('interface.misc.orders') }}"
-                                data-toggle="tooltip">{{ __('interface.misc.orders') }}</a>
+                                data-toggle="tooltip">
+                                {{ __('interface.misc.orders') }}
+                                @if (request()->get('badges')->orders > 0)
+                                    <span class="bubble bubble-warning bubble--on-dropdown"></span>
+                                @endif
+                            </a>
                             <a class="dropdown-item" href="{{ route('admin.shop.categories') }}"
                                 title="{{ __('interface.misc.configuration') }}"
                                 data-toggle="tooltip">{{ __('interface.misc.configuration') }}</a>

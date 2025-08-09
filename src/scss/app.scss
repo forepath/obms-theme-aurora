@@ -358,6 +358,7 @@ main {
                     justify-content: center;
                     transition-duration: .25s;
                     min-width: 2.5rem;
+                    position: relative;
                 }
             }
 
@@ -802,4 +803,26 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: $dropdown-link-hover-color;
     text-decoration: none;
     background-color: $dropdown-link-hover-bg;
+}
+
+.bubble {
+    border-radius: 0.3rem;
+    display: block;
+    height: 0.6rem !important;
+    width: 0.6rem !important;
+
+    &.bubble-warning {
+        background-color: var(--warning);
+    }
+
+    &.bubble-danger {
+        background-color: var(--danger);
+    }
+
+    &.bubble--on-sidebar {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(50%, -50%);
+    }
 }
