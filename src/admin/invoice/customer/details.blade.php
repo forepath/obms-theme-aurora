@@ -551,7 +551,7 @@
                                 <label for="user_id" class="col-md-4 col-form-label text-md-right">{{ __('interface.data.user_id') }}</label>
 
                                 <div class="col-md-8">
-                                    <input id="user_id" type="number" class="form-control " name="user_id" value="{{ $invoice->user_id }}">
+                                    <input id="user_id" type="text" class="form-control " name="user_id" value="{{ $invoice->user_id }}" data-autocomplete="user_id">
 
                                     @error('user_id')
                                     <span class="invalid-feedback" role="alert">
@@ -581,7 +581,7 @@
                                 <label for="contract_id" class="col-md-4 col-form-label text-md-right">{{ __('interface.data.contract_id') }}</label>
 
                                 <div class="col-md-8">
-                                    <input id="contract_id" type="number" class="form-control " name="contract_id" value="{{ $invoice->contract_id }}">
+                                    <input id="contract_id" type="text" class="form-control " name="contract_id" value="{{ $invoice->contract_id }}" data-autocomplete="contract_id">
 
                                     @error('contract_id')
                                     <span class="invalid-feedback" role="alert">
@@ -792,6 +792,14 @@
                     { data: 'status', sWidth: '1%' }
                 ],
                 order: [[0, 'desc']],
+            });
+
+            $('[data-autocomplete="user_id"]').autocomplete({
+                source: '/admin/customers/search',
+            });
+
+            $('[data-autocomplete="contract_id"]').autocomplete({
+                source: '/admin/contracts/search',
             });
         });
     </script>

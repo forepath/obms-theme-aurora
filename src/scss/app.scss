@@ -15,6 +15,9 @@ $bootstrap-icons-font-dir: "/themes/aurora/fonts/vendor/bootstrap-icons";
 @import 'datatables.net-dt/css/jquery.dataTables.min';
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.min';
 
+// jQuery UI
+@import "jquery-ui/themes/base/all.css";
+
 // Base style
 @import 'base';
 @import 'frame';
@@ -761,4 +764,42 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary);
+}
+
+.ui-autocomplete {
+    position: absolute;
+    z-index: 10000;
+    display: block;
+    background-color: $dropdown-bg;
+    border: $dropdown-border-width solid $dropdown-border-color;
+    border-radius: $dropdown-border-radius;
+    box-shadow: $dropdown-box-shadow;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: $dropdown-padding-y 0;
+}
+
+.ui-autocomplete .ui-menu-item {
+    cursor: pointer;
+    list-style: none;
+}
+
+.ui-autocomplete .ui-menu-item-wrapper {
+    display: block;
+    width: 100%;
+    padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+    clear: both;
+    font-weight: $font-weight-normal;
+    color: $dropdown-link-color;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.ui-autocomplete .ui-menu-item-wrapper.ui-state-active,
+.ui-autocomplete .ui-menu-item-wrapper:hover {
+    color: $dropdown-link-hover-color;
+    text-decoration: none;
+    background-color: $dropdown-link-hover-bg;
 }

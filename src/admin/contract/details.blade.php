@@ -546,7 +546,7 @@
                                 <label for="user_id" class="col-md-4 col-form-label text-md-right">{{ __('interface.data.user_id') }}</label>
 
                                 <div class="col-md-8">
-                                    <input id="user_id" type="number" class="form-control " name="user_id" value="{{ $contract->user_id }}">
+                                    <input id="user_id" type="text" class="form-control " name="user_id" value="{{ $contract->user_id }}" data-autocomplete="user_id">
 
                                     @error('user_id')
                                     <span class="invalid-feedback" role="alert">
@@ -794,6 +794,10 @@
                     { data: 'status', sWidth: '1%' }
                 ],
                 order: [[0, 'desc']],
+            });
+
+            $('[data-autocomplete="user_id"]').autocomplete({
+                source: '/admin/customers/search',
             });
         });
     </script>
