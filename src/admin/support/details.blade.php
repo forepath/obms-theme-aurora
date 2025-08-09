@@ -547,7 +547,7 @@
                                     <select id="category" class="form-control @error('category') is-invalid @enderror" name="category">
                                         <option value="">{{ __('interface.misc.all') }}</option>
                                         @foreach ($categories as $category)
-                                            <option value="{{ $category->id }}"{{ $category->id == old('category') ? ' selected' : '' }}></option>
+                                            <option value="{{ $category->id }}"{{ $category->id == old('category') ? ' selected' : '' }}>{{ $category->name }}</option>
                                         @endforeach
                                     </select>
 
