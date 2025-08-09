@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0](https://github.com/forepath/obms-theme-aurora/compare/v1.2.1...v1.3.0) (2025-08-09)
+
+
+### Features
+
+* notification indicators ([258544d](https://github.com/forepath/obms-theme-aurora/commit/258544d98fd3531e60f98d25285a9295837a777b))
+
 ## [1.2.1](https://github.com/forepath/obms-theme-aurora/compare/v1.2.0...v1.2.1) (2025-08-09)
 
 
