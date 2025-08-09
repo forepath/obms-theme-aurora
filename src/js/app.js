@@ -6,6 +6,9 @@
 require('./bootstrap');
 
 window.$  = require('jquery');
+
+require('jquery-ui/ui/widgets/autocomplete');
+
 window.dt = require('datatables.net');
 window.Vue = require('vue').default;
 window.Cookies = require('js-cookie');

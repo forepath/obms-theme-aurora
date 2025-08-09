@@ -1164,23 +1164,10 @@
                     <input id="user_id" type="hidden" name="user_id" value="{{ $user->id }}">
                     <div class="modal-body">
                         <div class="form-group row">
-                            <label for="contract_id" class="col-md-4 col-form-label text-md-right">{{ __('interface.data.contract_id') }}</label>
-
-                            <div class="col-md-8">
-                                <input id="contract_id" type="number" class="form-control @error('contract_id') is-invalid @enderror" name="contract_id" value="{{ old('contract_id') }}">
-
-                                @error('contract_id')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="form-group row">
                             <label for="invoice_id" class="col-md-4 col-form-label text-md-right">{{ __('interface.data.invoice_id') }}</label>
 
                             <div class="col-md-8">
-                                <input id="invoice_id" type="number" class="form-control @error('invoice_id') is-invalid @enderror" name="invoice_id" value="{{ old('invoice_id') }}">
+                                <input id="invoice_id" type="text" class="form-control @error('invoice_id') is-invalid @enderror" name="invoice_id" value="{{ old('invoice_id') }}" data-autocomplete="invoice_id">
 
                                 @error('invoice_id')
                                 <span class="invalid-feedback" role="alert">
@@ -1327,6 +1314,10 @@
                     $(this).parent().parent().remove();
                 });
             }
+
+            $('[data-autocomplete="invoice_id"]').autocomplete({
+                source: '/admin/invoices/suppliers/search?user_id={{ $user->id }}',
+            });
         });
     </script>
 @endsection

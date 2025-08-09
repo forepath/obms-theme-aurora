@@ -1312,7 +1312,7 @@
                             <label for="contract_id" class="col-md-4 col-form-label text-md-right">{{ __('interface.data.contract_id') }}</label>
 
                             <div class="col-md-8">
-                                <input id="contract_id" type="number" class="form-control @error('contract_id') is-invalid @enderror" name="contract_id" value="{{ old('contract_id') }}">
+                                <input id="contract_id" type="text" class="form-control @error('contract_id') is-invalid @enderror" name="contract_id" value="{{ old('contract_id') }}" data-autocomplete="contract_id">
 
                                 @error('contract_id')
                                 <span class="invalid-feedback" role="alert">
@@ -1348,7 +1348,7 @@
                             <label for="contract_id" class="col-md-4 col-form-label text-md-right">{{ __('interface.data.contract_id') }}</label>
 
                             <div class="col-md-8">
-                                <input id="contract_id" type="number" class="form-control @error('contract_id') is-invalid @enderror" name="contract_id" value="{{ old('contract_id') }}">
+                                <input id="contract_id" type="text" class="form-control @error('contract_id') is-invalid @enderror" name="contract_id" value="{{ old('contract_id') }}" data-autocomplete="contract_id">
 
                                 @error('contract_id')
                                 <span class="invalid-feedback" role="alert">
@@ -1361,7 +1361,7 @@
                             <label for="invoice_id" class="col-md-4 col-form-label text-md-right">{{ __('interface.data.invoice_id') }}</label>
 
                             <div class="col-md-8">
-                                <input id="invoice_id" type="number" class="form-control @error('invoice_id') is-invalid @enderror" name="invoice_id" value="{{ old('invoice_id') }}">
+                                <input id="invoice_id" type="text" class="form-control @error('invoice_id') is-invalid @enderror" name="invoice_id" value="{{ old('invoice_id') }}" data-autocomplete="invoice_id">
 
                                 @error('invoice_id')
                                 <span class="invalid-feedback" role="alert">
@@ -1560,6 +1560,14 @@
                         initTableOptionRemovalClickListener(table);
                     });
                 }
+            });
+
+            $('[data-autocomplete="contract_id"]').autocomplete({
+                source: '/admin/contracts/search?user_id={{ $user->id }}',
+            });
+
+            $('[data-autocomplete="invoice_id"]').autocomplete({
+                source: '/admin/invoices/customers/search?user_id={{ $user->id }}',
             });
         });
     </script>
