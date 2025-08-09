@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/forepath/obms-theme-aurora/compare/v1.1.0...v1.2.0) (2025-08-09)
+
+
+### Features
+
+* autocomplete support ([2c01299](https://github.com/forepath/obms-theme-aurora/commit/2c0129929d4d7ea110a715cd549861a424d0c936))
+
 ## [1.1.0](https://github.com/forepath/obms-theme-aurora/compare/v1.0.3...v1.1.0) (2025-08-08)
 
 
