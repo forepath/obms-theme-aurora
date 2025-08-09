@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.2](https://github.com/forepath/obms-theme-aurora/compare/v1.3.1...v1.3.2) (2025-08-09)
+
+
+### Bug Fixes
+
+* ticket category selection ([a1c27ff](https://github.com/forepath/obms-theme-aurora/commit/a1c27ff90e7cda246a70fb3be2e2ca63212b4732))
+
 ## [1.3.1](https://github.com/forepath/obms-theme-aurora/compare/v1.3.0...v1.3.1) (2025-08-09)
 
 
