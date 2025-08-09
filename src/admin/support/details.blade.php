@@ -424,7 +424,7 @@
 
                             <div class="col-md-8">
                                 <select id="category_id" class="form-control @error('category_id') is-invalid @enderror" name="category_id">
-                                    <option value="0">{{ __('interface.status.unassigned') }}</option>
+                                    <option value="">{{ __('interface.status.uncategorized') }}</option>
                                     @foreach ($move_categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
@@ -546,7 +546,6 @@
                                 <div class="col-md-8">
                                     <select id="category" class="form-control @error('category') is-invalid @enderror" name="category">
                                         <option value="">{{ __('interface.misc.all') }}</option>
-                                        <option value="0">{{ __('interface.status.uncategorized') }}</option>
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->id }}"{{ $category->id == old('category') ? ' selected' : '' }}></option>
                                         @endforeach

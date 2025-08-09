@@ -310,7 +310,6 @@
                                 <div class="col-md-8">
                                     <select id="category" class="form-control @error('category') is-invalid @enderror" name="category">
                                         <option value="">{{ __('interface.misc.all') }}</option>
-                                        <option value="0">{{ __('interface.status.uncategorized') }}</option>
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->id }}"{{ $category->id == old('category') ? ' selected' : '' }}></option>
                                         @endforeach
