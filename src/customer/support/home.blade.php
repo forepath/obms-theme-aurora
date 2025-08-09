@@ -155,7 +155,7 @@
 
                             <div class="col-md-8">
                                 <select id="category_id" class="form-control @error('category_id') is-invalid @enderror" name="category_id">
-                                    <option value="0"{{ old('category_id') == '0' ? ' selected' : '' }}>{{ __('interface.status.uncategorized') }}</option>
+                                    <option value=""{{ !old('category_id') ? ' selected' : '' }}>{{ __('interface.status.uncategorized') }}</option>
                                     @foreach ($categories as $catgory)
                                         <option value="{{ $catgory->id }}"{{ old('category_id') == $catgory->id ? ' selected' : '' }}>{{ $catgory->name }}</option>
                                     @endforeach
