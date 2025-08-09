@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1](https://github.com/forepath/obms-theme-aurora/compare/v1.2.0...v1.2.1) (2025-08-09)
+
+
+### Bug Fixes
+
+* app bundle regeneration ([85947b6](https://github.com/forepath/obms-theme-aurora/commit/85947b65a2a2427e1705ce653774aa08e5905e1b))
+
 ## [1.2.0](https://github.com/forepath/obms-theme-aurora/compare/v1.1.0...v1.2.0) (2025-08-09)
 
 
