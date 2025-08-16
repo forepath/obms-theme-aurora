@@ -274,6 +274,7 @@ return [
         'verifying'        => 'Verifying',
     ],
     'misc' => [
+        'accept_notice'                      => 'I have read the document :link (as of :date) and accept the terms and conditions.',
         'performance'                        => 'Performance',
         'instance'                           => 'Instance',
         'contract'                           => 'Contract',

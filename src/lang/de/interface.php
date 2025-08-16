@@ -274,6 +274,7 @@ return [
         'verifying'        => 'Wird verifiziert',
     ],
     'misc' => [
+        'accept_notice'                      => 'Ich habe das Dokument :link (Stand: :date) gelesen und akzeptiere die aufgeführten Bedingungen.',
         'performance'                        => 'Leistung',
         'instance'                           => 'Instanz',
         'contract'                           => 'Vertrag',
