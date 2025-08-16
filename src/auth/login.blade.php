@@ -58,11 +58,13 @@
 
                             <div class="form-group row">
                                 <div class="col-md-8 offset-md-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="remember" id="remember"
-                                            {{ old('remember') ? 'checked' : '' }}>
-
-                                        <label class="form-check-label" for="remember">
+                                    <div class="form-group d-flex align-items-center form-group--gapped">
+                                        <div>
+                                            <input class="form-control d-flex align-items-center" type="checkbox" name="remember" id="remember"
+                                                {{ old('remember') ? 'checked' : '' }}>
+                                        </div>
+                                        
+                                        <label class="col-form-label p-0" for="remember">
                                             {{ __('interface.actions.remember_me') }}
                                         </label>
                                     </div>
