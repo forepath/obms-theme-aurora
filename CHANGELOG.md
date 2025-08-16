@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.4](https://github.com/forepath/obms-theme-aurora/compare/v1.3.3...v1.3.4) (2025-08-16)
+
+
+### Bug Fixes
+
+* page acceptance checkbox labels ([3f579e6](https://github.com/forepath/obms-theme-aurora/commit/3f579e69dfcbee61e3b6a741c686397ee8107704))
+
 ## [1.3.3](https://github.com/forepath/obms-theme-aurora/compare/v1.3.2...v1.3.3) (2025-08-09)
 
 
