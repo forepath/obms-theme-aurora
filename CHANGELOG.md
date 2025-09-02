@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.5](https://github.com/forepath/obms-theme-aurora/compare/v1.3.4...v1.3.5) (2025-09-02)
+
+
+### Bug Fixes
+
+* str_contains haystack value fallback ([a2c2728](https://github.com/forepath/obms-theme-aurora/commit/a2c2728b779c624482b4c3105c4ed85d2ff5d3e3))
+
 ## [1.3.4](https://github.com/forepath/obms-theme-aurora/compare/v1.3.3...v1.3.4) (2025-08-16)
 
 
