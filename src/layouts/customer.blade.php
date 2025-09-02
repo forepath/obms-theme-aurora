@@ -101,7 +101,7 @@
                             <span>{{ __('interface.misc.dashboard') }}</span>
                         </a>
                     </li>
-                    <li class="nav-item {{ str_contains(Request::route()?->getName(), 'customer.support') ? 'active' : '' }}"
+                    <li class="nav-item {{ str_contains(Request::route()?->getName() ?? '', 'customer.support') ? 'active' : '' }}"
                         data-toggle="tooltip">
                         <a class="nav-link" href="{{ route('customer.support') }}"
                             title="{{ __('interface.misc.tickets') }}">
@@ -114,7 +114,7 @@
                         </a>
                     </li>
                     <li
-                        class="nav-item {{ str_contains(Request::route()?->getName(), 'customer.contracts') ? 'active' : '' }}">
+                        class="nav-item {{ str_contains(Request::route()?->getName() ?? '', 'customer.contracts') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('customer.contracts') }}"
                             title="{{ __('interface.misc.contracts') }}" data-toggle="tooltip">
                             <i class="bi bi-file-earmark-text-fill"></i>
@@ -122,7 +122,7 @@
                         </a>
                     </li>
                     <li
-                        class="nav-item {{ str_contains(Request::route()?->getName(), 'customer.invoices') ? 'active' : '' }}">
+                        class="nav-item {{ str_contains(Request::route()?->getName() ?? '', 'customer.invoices') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('customer.invoices') }}"
                             title="{{ __('interface.misc.invoices') }}" data-toggle="tooltip">
                             <i class="bi bi-file-earmark-text">
@@ -136,7 +136,7 @@
                         </a>
                     </li>
                     <li
-                        class="nav-item {{ str_contains(Request::route()?->getName(), 'customer.orders') ? 'active' : '' }}">
+                        class="nav-item {{ str_contains(Request::route()?->getName() ?? '', 'customer.orders') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('customer.shop.orders') }}"
                             title="{{ __('interface.misc.orders') }}" data-toggle="tooltip">
                             <i class="bi bi-cart-fill"></i>
@@ -168,7 +168,7 @@
                 </h6>
                 <ul class="nav flex-column">
                     <li
-                        class="nav-item {{ str_contains(Request::route()?->getName(), 'public.shop') ? 'active' : '' }}">
+                        class="nav-item {{ str_contains(Request::route()?->getName() ?? '', 'public.shop') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('public.shop') }}"
                             title="{{ __('interface.actions.browse') }}" data-toggle="tooltip">
                             <i class="bi bi-arrow-right"></i>

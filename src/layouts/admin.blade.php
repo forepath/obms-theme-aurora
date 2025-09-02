@@ -123,7 +123,7 @@
                 </h6>
                 <ul class="nav flex-column">
                     <li
-                        class="nav-item dropdown show {{ str_contains(Request::route()?->getName(), 'admin.support') ? 'active' : '' }}">
+                        class="nav-item dropdown show {{ str_contains(Request::route()?->getName() ?? '', 'admin.support') ? 'active' : '' }}">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
                             aria-expanded="false" title="{{ __('interface.misc.support') }}">
                             <div>
@@ -159,7 +159,7 @@
                 </h6>
                 <ul class="nav flex-column">
                     <li
-                        class="nav-item {{ str_contains(Request::route()?->getName(), 'admin.customers') ? 'active' : '' }}">
+                        class="nav-item {{ str_contains(Request::route()?->getName() ?? '', 'admin.customers') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('admin.customers') }}"
                             title="{{ __('interface.misc.customers') }}" data-toggle="tooltip">
                             <i class="bi bi-person"></i>
@@ -167,7 +167,7 @@
                         </a>
                     </li>
                     <li
-                        class="nav-item dropdown show {{ str_contains(Request::route()?->getName(), 'admin.invoices.customers') ? 'active' : '' }}">
+                        class="nav-item dropdown show {{ str_contains(Request::route()?->getName() ?? '', 'admin.invoices.customers') ? 'active' : '' }}">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
                             aria-expanded="false" title="{{ __('interface.misc.invoices') }}">
                             <div>
@@ -194,7 +194,7 @@
                         </div>
                     </li>
                     <li
-                        class="nav-item dropdown show {{ (str_contains(Request::route()?->getName(), 'admin.contracts') ? 'active' : '') || (str_contains(Request::route()?->getName(), 'admin.discounts') ? 'active' : '') }}">
+                        class="nav-item dropdown show {{ (str_contains(Request::route()?->getName() ?? '', 'admin.contracts') ? 'active' : '') || (str_contains(Request::route()?->getName() ?? '', 'admin.discounts') ? 'active' : '') }}">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
                             aria-expanded="false" title="{{ __('interface.misc.contracts') }}">
                             <div>
@@ -218,7 +218,7 @@
                         </div>
                     </li>
                     <li
-                        class="nav-item dropdown show {{ str_contains(Request::route()?->getName(), 'admin.shop') ? 'active' : '' }}">
+                        class="nav-item dropdown show {{ str_contains(Request::route()?->getName() ?? '', 'admin.shop') ? 'active' : '' }}">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
                             aria-expanded="false" title="{{ __('interface.misc.shop') }}">
                             <div>
@@ -257,7 +257,7 @@
                 </h6>
                 <ul class="nav flex-column">
                     <li
-                        class="nav-item {{ str_contains(Request::route()?->getName(), 'admin.suppliers') ? 'active' : '' }}">
+                        class="nav-item {{ str_contains(Request::route()?->getName() ?? '', 'admin.suppliers') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('admin.suppliers') }}"
                             title="{{ __('interface.misc.suppliers') }}" data-toggle="tooltip">
                             <i class="bi bi-person"></i>
@@ -265,7 +265,7 @@
                         </a>
                     </li>
                     <li
-                        class="nav-item dropdown show {{ str_contains(Request::route()?->getName(), 'admin.invoices.suppliers') ? 'active' : '' }}">
+                        class="nav-item dropdown show {{ str_contains(Request::route()?->getName() ?? '', 'admin.invoices.suppliers') ? 'active' : '' }}">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
                             aria-expanded="false" title="{{ __('interface.misc.invoices') }}">
                             <div>
@@ -299,7 +299,7 @@
                 <ul class="nav flex-column">
                     @if (Auth::user()->role == 'admin')
                         <li
-                            class="nav-item {{ str_contains(Request::route()?->getName(), 'admin.employees') ? 'active' : '' }}">
+                            class="nav-item {{ str_contains(Request::route()?->getName() ?? '', 'admin.employees') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('admin.employees') }}"
                                 title="{{ __('interface.misc.employees') }}" data-toggle="tooltip">
                                 <i class="bi bi-person"></i>
@@ -308,7 +308,7 @@
                         </li>
                     @endif
                     <li
-                        class="nav-item {{ str_contains(Request::route()?->getName(), 'admin.pages') ? 'active' : '' }}">
+                        class="nav-item {{ str_contains(Request::route()?->getName() ?? '', 'admin.pages') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('admin.pages') }}"
                             title="{{ __('interface.misc.custom_pages') }}" data-toggle="tooltip">
                             <i class="bi bi-list"></i>
@@ -316,7 +316,7 @@
                         </a>
                     </li>
                     <li
-                        class="nav-item {{ str_contains(Request::route()?->getName(), 'admin.filemanager') ? 'active' : '' }}">
+                        class="nav-item {{ str_contains(Request::route()?->getName() ?? '', 'admin.filemanager') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('admin.filemanager') }}"
                             title="{{ __('interface.misc.file_manager') }}" data-toggle="tooltip">
                             <i class="bi bi-folder"></i>
@@ -332,7 +332,7 @@
                     <ul class="nav flex-column">
                         @if (Auth::user()->role == 'admin')
                             <li
-                                class="nav-item {{ str_contains(Request::route()?->getName(), 'admin.settings') ? 'active' : '' }}">
+                                class="nav-item {{ str_contains(Request::route()?->getName() ?? '', 'admin.settings') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('admin.settings') }}"
                                     title="{{ __('interface.misc.parameters') }}" data-toggle="tooltip">
                                     <i class="bi bi-gear-wide-connected"></i>
@@ -340,7 +340,7 @@
                                 </a>
                             </li>
                             <li
-                                class="nav-item {{ str_contains(Request::route()?->getName(), 'admin.paymentgateways') ? 'active' : '' }}">
+                                class="nav-item {{ str_contains(Request::route()?->getName() ?? '', 'admin.paymentgateways') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('admin.paymentgateways') }}"
                                     title="{{ __('interface.misc.payment_gateways') }}" data-toggle="tooltip">
                                     <i class="bi bi-currency-euro"></i>
@@ -348,7 +348,7 @@
                                 </a>
                             </li>
                             <li
-                                class="nav-item dropdown show {{ str_contains(Request::route()?->getName(), 'admin.api.users') ? 'active' : '' }}">
+                                class="nav-item dropdown show {{ str_contains(Request::route()?->getName() ?? '', 'admin.api.users') ? 'active' : '' }}">
                                 <a class="nav-link dropdown-toggle" href="#" id="dropdown04"
                                     data-toggle="dropdown" aria-expanded="false"
                                     title="{{ __('interface.misc.api') }}">
@@ -369,7 +369,7 @@
                             </li>
                             @if (empty(request()->get('tenant')))
                                 <li
-                                    class="nav-item {{ str_contains(Request::route()?->getName(), 'admin.tenants') ? 'active' : '' }}">
+                                    class="nav-item {{ str_contains(Request::route()?->getName() ?? '', 'admin.tenants') ? 'active' : '' }}">
                                     <a class="nav-link" href="{{ route('admin.tenants') }}"
                                         title="{{ __('interface.misc.tenants') }}" data-toggle="tooltip">
                                         <i class="bi bi-people"></i>
