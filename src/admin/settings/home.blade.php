@@ -23,7 +23,7 @@
                                     <label class="custom-file-label" for="logoInput">{{ __('interface.actions.choose_file') }}</label>
                                 </div>
                                 @if (! empty(config('company.logo')))
-                                    <a href="{{ route('admin.settings.assets.remove', ['setting' => 'company.logo']) }}" class="btn btn-danger ml-3">
+                                    <a href="{{ route('admin.settings.assets.remove', ['setting' => 'company.logo']) }}" class="btn btn-danger ml-3 d-flex align-items-center justify-content-center">
                                         <i class="bi bi-trash"></i>
                                     </a>
                                 @endif
@@ -42,7 +42,7 @@
                                     <label class="custom-file-label" for="faviconInput">{{ __('interface.actions.choose_file') }}</label>
                                 </div>
                                 @if (! empty(config('company.favicon')))
-                                    <a href="{{ route('admin.settings.assets.remove', ['setting' => 'company.favicon']) }}" class="btn btn-danger ml-3">
+                                    <a href="{{ route('admin.settings.assets.remove', ['setting' => 'company.favicon']) }}" class="btn btn-danger ml-3 d-flex align-items-center justify-content-center">
                                         <i class="bi bi-trash"></i>
                                     </a>
                                 @endif
