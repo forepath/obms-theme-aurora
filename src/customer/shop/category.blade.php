@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid my-4">
         @if (! empty($category))
-            <div class="row">
+            <div class="row mb-4">
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
@@ -20,7 +20,7 @@
                 </div>
             </div>
         @else
-            <div class="row">
+            <div class="row mb-4">
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
@@ -57,6 +57,13 @@
                         <i class="bi bi-exclamation-triangle"></i>
                         @if ($user->role == 'customer')
                             {{ __('interface.misc.missing_data_notice') }}
+                            @if (Request::route()?->getName() !== 'customer.profile')
+                                <br>
+                                <br>
+                                <a href="{{ route('customer.profile') }}"
+                                    class="btn btn-primary"><i class="bi bi-pencil-square"></i>
+                                    {{ __('interface.actions.complete_now') }}</a>
+                            @endif
                         @else
                             {{ __('interface.misc.order_role_missing_hint') }}
                         @endif

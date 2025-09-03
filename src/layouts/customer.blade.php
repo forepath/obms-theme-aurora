@@ -144,7 +144,7 @@
                         </a>
                     </li>
                 </ul>
-                @if (!empty(request()->get('service_products')))
+                @if (!empty(request()->get('service_products')) && request()->get('service_products')->isNotEmpty())
                     <h6
                         class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-2 mt-3 text-primary">
                         <span>{{ __('interface.misc.products') }}</span>

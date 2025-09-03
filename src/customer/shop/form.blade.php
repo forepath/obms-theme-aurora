@@ -262,9 +262,9 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group bg-white border rounded py-2 px-3">
-                                                        <div class="row">
-                                                            <div class="col-md-2">
-                                                                <input id="accept_{{ $accept->id }}" type="checkbox" class="form-control" name="accept_{{ $accept->id }}" value="true">
+                                                        <div class="form-group d-flex align-items-center form-group--gapped mb-0">
+                                                            <div>
+                                                                <input id="accept_{{ $accept->id }}" type="checkbox" class="form-control d-flex align-items-center" name="accept_{{ $accept->id }}" value="true">
                                                             </div>
 
                                                             <label for="accept_{{ $accept->id }}" class="col-md-10 col-form-label">{!! __('interface.misc.accept_notice', ['link' => '<a href="' . (Route::has($accept->route) ? route($accept->route) : $accept->route) . '" target="_blank">' . __($accept->title) . '</a>', 'date' => $accept->latest->created_at->format('d.m.Y, H:i')]) !!} *</label>
