@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.6](https://github.com/forepath/obms-theme-aurora/compare/v1.3.5...v1.3.6) (2025-09-03)
+
+
+### Bug Fixes
+
+* center icons on action buttons ([5a48082](https://github.com/forepath/obms-theme-aurora/commit/5a48082f0f4cca35451e1bbde13116ff0e1c4183))
+
 ## [1.3.5](https://github.com/forepath/obms-theme-aurora/compare/v1.3.4...v1.3.5) (2025-09-02)
 
 
