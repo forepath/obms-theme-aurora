@@ -8,14 +8,15 @@
                     @csrf
                     @if ($acceptable->isNotEmpty())
                         @foreach ($acceptable as $accept)
-                            <div class="form-group row">
-                                <div class="col-md-1">
-                                    <input id="accept_{{ $accept->id }}" type="checkbox" class="form-control"
+                        <div class="form-group bg-white shadow-sm rounded py-2 px-3">
+                            <div class="form-group d-flex align-items-center form-group--gapped mb-0">
+                                <div>
+                                    <input id="accept_{{ $accept->id }}" type="checkbox" class="form-control d-flex align-items-center"
                                         name="accept_{{ $accept->id }}" value="true">
                                 </div>
 
                                 <label for="accept_{{ $accept->id }}"
-                                    class="col-md-11 col-form-label">{!! __('interface.misc.accept_notice', [
+                                    class="col-form-label p-0">{!! __('interface.misc.accept_notice', [
                                         'link' =>
                                             '<a href="' .
                                             (Route::has($accept->route) ? route($accept->route) : $accept->route) .
@@ -25,6 +26,7 @@
                                         'date' => $accept->latest->created_at->format('d.m.Y, H:i'),
                                     ]) !!}</label>
                             </div>
+                        </div>
                         @endforeach
                         <button type="submit" class="btn btn-primary"><i class="bi bi-check-circle"></i>
                             {{ __('interface.actions.accept_and_continue') }}</button>
