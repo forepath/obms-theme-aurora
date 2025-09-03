@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.7](https://github.com/forepath/obms-theme-aurora/compare/v1.3.6...v1.3.7) (2025-09-03)
+
+
+### Bug Fixes
+
+* document acceptance elements ([af5f4de](https://github.com/forepath/obms-theme-aurora/commit/af5f4de0da487b173bc8f53861b66ec25540614f))
+
 ## [1.3.6](https://github.com/forepath/obms-theme-aurora/compare/v1.3.5...v1.3.6) (2025-09-03)
 
 
